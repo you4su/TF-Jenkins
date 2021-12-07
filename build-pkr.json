@@ -37,7 +37,7 @@
           "aws": [
             {
               "access_key": "AKIAUERBNUFUWW6VFFEF",
-              "ami_name": "Jenkins-Gold-Slave-Image-jdk8-1.6",
+              "ami_name": "Jenkins-Gold-Slave-Image-jdk8-1.7",
               "instance_type": "t2.large",
               "region": "us-east-1",
               "secret_key": "2nAC+WvhABbra7w0mYrXmS1oZcfk8atNYGCEWzdk",
