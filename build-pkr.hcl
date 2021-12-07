@@ -2,7 +2,7 @@ source "amazon-ebs" "aws" {
   access_key    = "AKIAUERBNUFUWW6VFFEF"
   secret_key    = "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"
   subnet_id     = "subnet-0bfc0d4034e3e3fff"
-  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-1.6"
+  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-1.7"
   instance_type = "t2.large"
   region        = "us-east-1"
   source_ami_filter {
