@@ -31,7 +31,7 @@ build {
   ]
 
   provisioner "file" {
-    source = "./slave-jdk8/install_essentials.sh"
+    source = "./install_essentials.sh"
     destination = "/tmp/install_essentials.sh"
   }
 
