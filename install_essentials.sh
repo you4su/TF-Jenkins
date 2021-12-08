@@ -9,7 +9,7 @@ function install_packages()
     sudo apt-get install -y gnupg2 && \
 #Added command from article - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2rl_verify.html
     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.key && gpg2 --import ec2rl.key && \
-    curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig && gpg2 --verify ./ec2rl.tgz.sig && \
+    curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig && gpg2 --verify ./ec2rl.tgz.sig
 # #Install open jdk
 #     sudo apt-get install openjdk-11-jdk -y && sleep 60
 #     echo "---------------------------------------------------------"
