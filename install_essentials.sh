@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 function install_packages()
 {
     sudo apt-get update -y;
