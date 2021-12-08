@@ -38,4 +38,4 @@
 # #Step-10: Intall Git:
       sudo apt install git-all -y && \
 # #Step-11: Install Zip:
-      sudo apt install zip unzip -y && \
+      sudo apt install zip unzip -y
