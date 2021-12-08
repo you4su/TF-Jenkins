@@ -14,14 +14,14 @@
 #     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig && \
 #     gpg2 --verify ./ec2rl.tgz.sig
 # #Install open jdk
-    sudo apt-get install openjdk-11-jdk -y && \
+    sudo apt-get install openjdk-11-jdk -y \
     echo "---------------------------------------------------------"
     echo "JDK installation completed."
     echo "---------------------------------------------------------"
 # #Install python pip3, python and nfs modules
     sudo apt-get -y install python3-pip && sudo apt-get install -y build-essential libffi-dev python-dev && \
     sudo apt-get install -y nfs-common && sudo systemctl restart systemd-logind && \
-    pip3 install python-bcrypt -y && \
+    pip3 install python-bcrypt -y \
     echo "---------------------------------------------------------"
     echo "Python3 bycrypt module install completed.."
     echo "---------------------------------------------------------"
@@ -34,8 +34,8 @@
 ##     sudo apt-get update -y && sleep 30
 #     sudo apt-get install docker-ce docker-ce-cli containerd.io -y    
 # #Step-9: Install NodeJS:
-    sudo apt-get install nodejs npm -y && \
+    sudo apt-get install nodejs npm -y \
 # #Step-10: Intall Git:
-    sudo apt-get install git-all -y && \
+    sudo apt-get install git-all -y \
 # #Step-11: Install Zip:
     sudo apt-get -y install zip unzip
