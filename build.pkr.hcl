@@ -42,9 +42,9 @@ build {
     inline = [
       "echo Adding ssh public key",
       "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiYiVFXOkOAHTbi+zk+MlZBnteDUj0g9u9jZsSu398ApHfH/5sgihtWm6wwD3UuGLT0vtZIS2lihSmcNH4IHn+XHl9xP/ohYg4wdN4RujnxeIcpn0q9oyCp7VOlxxodAEm+TPeW3pPQFh+hmzlpoqIFZrwNsmQiFKKLLt/bi7WFc0gTcrkW8mSiKHj4SkgOQsXvOmT0/Sn3SVUejs6IjTIRHSPuwU+aHEvJwbJrc1uC8dxp433qRZy07DU48+8tsc4a2SxZ3XgTEAMQzPS9wPJY4p2ZAq9Vr1Lai4fMlAYtygGx5AayDUxzIISPdqbCOkV7PRzDPSKUBIWJXh0iifD jenkins-master-2-slave' >> /home/ubuntu/.ssh/authorized_keys",
-      "chmod 700 /home/ubuntu/.ssh",
-      "chmod 600 /home/ubuntu/.ssh/authorized_keys",
-      "chmod u+x /tmp/install_essentials.sh",
+      "sudo chmod 700 /home/ubuntu/.ssh",
+      "sudo chmod 600 /home/ubuntu/.ssh/authorized_keys",
+      "sudo chmod u+x /tmp/install_essentials.sh",
       "sudo bash /tmp/install_essentials.sh"
       ]
   }
