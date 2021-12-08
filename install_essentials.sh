@@ -14,7 +14,7 @@
     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig
     gpg2 --verify ./ec2rl.tgz.sig
 #Install open jdk
-    sudo apt-get install openjdk-11-jdk -y
+    sudo apt-get install openjdk-11-jdk -y && sleep 60
     echo "---------------------------------------------------------"
     echo "JDK installation completed."
     echo "---------------------------------------------------------"
