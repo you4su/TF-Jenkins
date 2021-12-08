@@ -34,8 +34,8 @@
 ##     sudo apt-get update -y && sleep 30
 #     sudo apt-get install docker-ce docker-ce-cli containerd.io -y    
 # #Step-9: Install NodeJS:
-      sudo apt install nodejs npm -y && \
+    sudo apt-get install nodejs npm -y && \
 # #Step-10: Intall Git:
-      sudo apt install git-all -y && \
+    sudo apt-get install git-all -y && \
 # #Step-11: Install Zip:
-      sudo apt install zip unzip -y
+    sudo apt-get -y install zip unzip
