@@ -1,6 +1,4 @@
 #!/bin/bash
-function install_packages()
-{
     sudo apt-get update -y && sudo apt-get upgrade -y && \
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections && \
@@ -38,6 +36,3 @@ function install_packages()
 #     sudo apt install git-all -y && sleep 60
 # #Step-11: Install Zip:
 #     sudo apt install zip unzip -y && sleep 60
-}
-
-install_packages
