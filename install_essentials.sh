@@ -3,7 +3,7 @@
     sudo apt-get upgrade -y && sleep 180
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
-    sudo apt-get install -y -q
+    sudo apt-get install -y -q && sleep 50
     sudo chmod 777 /var/cache/debconf/
     sudo chmod 777 /var/cache/debconf/passwords.dat
     apt-get install -y gnupg2 && sleep 20
