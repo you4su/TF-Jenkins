@@ -19,25 +19,25 @@
     echo "JDK installation completed."
     echo "---------------------------------------------------------"
 #Install python pip3, python and nfs modules
-    sudo apt-get -y install python3-pip && sleep 30
-    sudo apt-get install -y build-essential libffi-dev python-dev && sleep 20
-    sudo apt-get install -y nfs-common && sleep 20
+    sudo apt-get -y install python3-pip
+    sudo apt-get install -y build-essential libffi-dev python-dev
+    sudo apt-get install -y nfs-common
     sudo systemctl restart systemd-logind
-    pip3 install python-bcrypt && sleep 20
+    pip3 install python-bcrypt
     echo "---------------------------------------------------------"
     echo "Python3 bycrypt module install completed.."
     echo "---------------------------------------------------------"
 #Install Maven:
-    sudo apt-get install maven -y && sleep 60
+    sudo apt-get install maven -y
 #Step-8: Install Docker:
-    sudo apt-get install ca-certificates curl gnupg lsb-release -y &&  sleep 30
+    sudo apt-get install ca-certificates curl gnupg lsb-release -y
     sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-    sudo apt-get update -y && sleep 30
-    sudo apt-get install docker-ce docker-ce-cli containerd.io -y &&  sleep 60    
+    sudo apt-get update -y
+    sudo apt-get install docker-ce docker-ce-cli containerd.io -y    
 #Step-9: Install NodeJS:
-    sudo apt install nodejs npm -y && sleep 30
+    sudo apt install nodejs npm -y
 #Step-10: Intall Git:
-    sudo apt install git-all -y && sleep 60
+    sudo apt install git-all -y
 #Step-11: Install Zip:
-    sudo apt install zip unzip -y && sleep 60
+    sudo apt install zip unzip -y
