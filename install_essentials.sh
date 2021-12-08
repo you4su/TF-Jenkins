@@ -1,13 +1,15 @@
 #!/bin/bash -x
-    sudo apt-get update -y && sleep 100s
-    sudo apt-get upgrade -y && sleep 210s
+    sudo apt-get update -y
+    sleep(time: 100, unit: "SECONDS")
+    sudo apt-get upgrade -y
+    sleep(time: 210, unit: "SECONDS")
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
     sudo apt-get install dialog apt-utils
-    sudo apt-get install -y -q && sleep 40s
+    sudo apt-get install -y -q && sleep 40
     sudo chmod 777 /var/cache/debconf/
     sudo chmod 777 /var/cache/debconf/passwords.dat
-    sudo apt-get install -y gnupg2 && sleep 50s
+    sudo apt-get install -y gnupg2 && sleep 50
 #Added command from article - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2rl_verify.html
     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.key
     gpg2 --import ec2rl.key
