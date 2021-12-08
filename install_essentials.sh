@@ -3,6 +3,7 @@
     sudo apt-get upgrade -y && sleep 180
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+    sudo apt-get install dialog apt-utils && sleep 50
     sudo apt-get install -y -q && sleep 50
     sudo chmod 777 /var/cache/debconf/
     sudo chmod 777 /var/cache/debconf/passwords.dat
@@ -37,6 +38,6 @@
 #Step-9: Install NodeJS:
     sudo apt install nodejs npm -y && sleep 30
 #Step-10: Intall Git:
-    sudo apt install git-all -y && sleep 20
+    sudo apt install git-all -y && sleep 60
 #Step-11: Install Zip:
-    sudo apt install zip unzip -y && sleep 20
+    sudo apt install zip unzip -y && sleep 60
