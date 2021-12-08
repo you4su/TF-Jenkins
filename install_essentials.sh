@@ -1,5 +1,6 @@
 #!/bin/bash
     sudo apt-get update -y && sudo apt-get upgrade -y && \
+    echo 'upgrade successfull' && \
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections && \
     sudo apt-get install dialog apt-utils && sudo apt-get install -y -q && \
