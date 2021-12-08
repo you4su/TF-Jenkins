@@ -3,6 +3,7 @@
     echo 'upgrade successfull' && \
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections && \
+    echo 'config successfull' && \
     sudo apt-get install dialog apt-utils && sudo apt-get install -y -q && \
     sudo chmod 777 /var/cache/debconf/ && sudo chmod 777 /var/cache/debconf/passwords.dat && \
     sudo apt-get install -y gnupg2 && \
