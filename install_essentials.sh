@@ -1,6 +1,6 @@
 #!/bin/bash -x
-    sudo apt-get update -y && sleep 60
-    sudo apt-get upgrade -y && sleep 210
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
     sudo apt-get install dialog apt-utils && sleep 50
@@ -14,7 +14,7 @@
     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig
     gpg2 --verify ./ec2rl.tgz.sig
 #Install open jdk
-    sudo apt-get install openjdk-11-jdk -y && sleep 90
+    sudo apt-get install openjdk-11-jdk -y && sleep
     echo "---------------------------------------------------------"
     echo "JDK installation completed."
     echo "---------------------------------------------------------"
