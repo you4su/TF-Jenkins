@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
     sudo apt-get update -y && sudo apt-get upgrade -y && \
     echo 'upgrade successfull' && \
 #To resolve unable to initialize frontend: Dialog error
@@ -7,6 +7,8 @@
     sudo apt-get install dialog apt-utils && sudo apt-get install -y -q && \
     sudo chmod 777 /var/cache/debconf/ && sudo chmod 777 /var/cache/debconf/passwords.dat && \
     sudo apt-get install -y gnupg2 && \
+    pwd
+    whoami
     ls -la /home/ubuntu
 #Added command from article - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2rl_verify.html
     curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.key && \
