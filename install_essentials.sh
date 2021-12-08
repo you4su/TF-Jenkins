@@ -1,6 +1,6 @@
 #!/bin/bash -x
-    sudo apt-get update -y && sleep 40
-    sudo apt-get upgrade -y && sleep 180
+    sudo apt-get update -y && sleep 60
+    sudo apt-get upgrade -y && sleep 210
 #To resolve unable to initialize frontend: Dialog error
     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
     sudo apt-get install dialog apt-utils && sleep 50
