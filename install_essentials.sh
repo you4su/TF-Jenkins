@@ -1,6 +1,4 @@
-#!/usr/bin/bash -x
-
-
+#!/bin/bash -x
 function install_updates_and_packages()
 {
 #Update and Upgrade OS pkgs:
@@ -40,7 +38,6 @@ function install_updates_and_packages()
     echo "---------------------------------------------------------"
     echo "Python3 bycrypt module install completed.."
     echo "---------------------------------------------------------"
-	
 #Install Maven:
     sudo apt-get install maven -y
     sleep 60
