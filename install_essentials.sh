@@ -1,6 +1,6 @@
 #!/bin/bash
-    sudo apt-get update -y && sudo apt-get upgrade -y && \
-    echo 'upgrade successfull' && \
+    sudo apt-get update -y && sudo apt-get upgrade -y \
+    echo 'upgrade successfull' \
 #To resolve unable to initialize frontend: Dialog error
 #     echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections && \
 #     echo 'config successfull' && \
