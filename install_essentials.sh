@@ -1,6 +1,6 @@
 #!/bin/bash -x
-function install_updates_and_packages()
-{
+#function install_updates_and_packages()
+#{
 #Update and Upgrade OS pkgs:
     sudo apt-get update -y
     sleep 40
@@ -59,5 +59,5 @@ function install_updates_and_packages()
 #Step-11: Install Zip:
     sudo apt install zip unzip -y
     sleep 20
-}
-install_updates_and_packages
+#}
+#install_updates_and_packages
