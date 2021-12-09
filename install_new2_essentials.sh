@@ -17,10 +17,15 @@ echo "updrage done"
   curl -O https://s3.amazonaws.com/ec2rescuelinux/ec2rl.tgz.sig && \
   gpg2 --verify ./ec2rl.tgz.sig
 #Install open jdk
-  sudo apt-get install openjdk-11-jdk -y \
-  echo "------------------------------"
-  echo "JDK install done."
-
+#  sudo apt-get install openjdk-11-jdk -y \
+#  echo "------------------------------"
+#  echo "JDK install done."
+#Install Amazon Corretto
+   wget -O- https://apt.corretto.aws/corretto.key | sudo apt-key add -
+   sudo add-apt-repository 'deb https://apt.corretto.aws stable main' && \
+   sudo apt-get update; sudo apt-get install -y java-11-amazon-corretto-jdk && \
+   echo "---------------------------------------------"
+   echo "Amazon Correctto installation completed."
 #Install python pip3
   sudo apt-get -y install python3-pip && sudo apt-get install -y build-essential libffi-dev-python-dev && \
   sudo apt-get install -y nfs-common && sudo systemctl restart systemd-logind && \
