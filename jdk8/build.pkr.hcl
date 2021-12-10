@@ -2,9 +2,15 @@ source "amazon-ebs" "aws" {
   access_key    = ""
   secret_key    = ""
   subnet_id     = "subnet-0bfc0d4034e3e3fff"
-  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-2.0"
+  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-2.1"
   instance_type = "t2.large"
   region        = "us-east-1"
+  launch_block_device_mappings { 
+    device_name = "/dev/sda1" 
+    volume_size = 40 
+    volume_type = "gp2" 
+    delete_on_termination = true 
+  }
   source_ami_filter {
     filters = {
       name                = "Ubuntu18-Gold-Image-Production-3.4"
