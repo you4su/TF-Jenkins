@@ -29,6 +29,7 @@ echo "updrage done"
 #Install NodeJS
   #sudo apt-get install nodejs npm -y \ return 8.5v
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && \
+  sudo apt-get install nodejs -y && \
   curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null && \
   echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && \
   sudo apt-get update -y && \
