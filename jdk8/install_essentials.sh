@@ -4,7 +4,6 @@ sudo apt-get update -y && sudo apt-get upgrade -y \
 echo "updrage done"
 
 #Debconf
-  sudo chmod 777 /home/ubuntu
   echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections && \
   echo 'config successfull' & \
   sudo apt-get install dialog apt-utils -y && sudo apt-get install -y -q && \
