@@ -2,9 +2,15 @@ source "amazon-ebs" "aws" {
   access_key    = ""
   secret_key    = ""
   subnet_id     = "subnet-0bfc0d4034e3e3fff"
-  ami_name      = "Jenkins-Gold-Slave-Image-jdk11-1.9"
+  ami_name      = "Jenkins-Gold-Slave-Image-jdk11-2.0"
   instance_type = "t2.large"
   region        = "us-east-1"
+  launch_block_device_mappings {
+    device_name = "/dev/sda1"
+    volume_size = 40
+    volume_type = "gp2"
+    delete_on_termination = true
+  }
   source_ami_filter {
     filters = {
       name                = "Ubuntu18-Gold-Image-Production-3.4"
@@ -41,10 +47,10 @@ build {
  provisioner "shell" {
     inline = [
       "echo Adding ssh public key",
-      "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiYiVFXOkOAHTbi+zk+MlZBnteDUj0g9u9jZsSu398ApHfH/5sgihtWm6wwD3UuGLT0vtZIS2lihSmcNH4IHn+XHl9xP/ohYg4wdN4RujnxeIcpn0q9oyCp7VOlxxodAEm+TPeW3pPQFh+hmzlpoqIFZrwNsmQiFKKLLt/bi7WFc0gTcrkW8mSiKHj4SkgOQsXvOmT0/Sn3SVUejs6IjTIRHSPuwU+aHEvJwbJrc1uC8dxp433qRZy07DU48+8tsc4a2SxZ3XgTEAMQzPS9wPJY4p2ZAq9Vr1Lai4fMlAYtygGx5AayDUxzIISPdqbCOkV7PRzDPSKUBIWJXh0iifD jenkins-master-2-slave' >> /home/ubuntu/.ssh/authorized_keys",
-      "sudo chmod 700 /home/ubuntu/.ssh",
-      "sudo chmod 600 /home/ubuntu/.ssh/authorized_keys",
-      "sudo chmod u+x /tmp/install_essentials.sh",
+      "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDimPnfTY+41Rbz4MSfF4JvsziK+6aAmQ4WX0QVBkWcq8YIhHMHaM/cv23Ip76tiEWopATVC8XW2k19jP3H/A2BDF4ZwPhDTLrew/9aPR14eQl6Wvezc9/pQ7vmAs9q+NhroXY8ihRJSJvAosJKlzYbJEOhQrsq4CtCfamI3RRj8a5dQH4nAtGvDUpurnPlPX1gBRyuIPFCnYrZZIo1KU86NuxmuigGLavVone0bKZRNGIbS8NwJWPfkyjsmnPgDmOoc1tfMkW3RUNkQiBQ6MwK3T2eirbF/GPGfP8IsQWTsLXLNysngNH1XLBF9pxpyMCY9NTQAiOymzqs07ZdN0RT imported-openssh-key' >> /home/ubuntu/.ssh/authorized_keys",
+      "chmod 700 /home/ubuntu/.ssh",
+      "chmod 600 /home/ubuntu/.ssh/authorized_keys",
+      "chmod u+x /tmp/install_essentials.sh",
       "sudo bash /tmp/install_essentials.sh"
       ]
   }
