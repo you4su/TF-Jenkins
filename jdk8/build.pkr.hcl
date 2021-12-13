@@ -47,7 +47,7 @@ build {
  provisioner "shell" {
     inline = [
       "echo Adding ssh public key",
-       "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDimPnfTY+41Rbz4MSfF4JvsziK+6aAmQ4WX0QVBkWcq8YIhHMHaM/cv23Ip76tiEWopATVC8XW2k19jP3H/A2BDF4ZwPhDTLrew/9aPR14eQl6Wvezc9/pQ7vmAs9q+NhroXY8ihRJSJvAosJKlzYbJEOhQrsq4CtCfamI3RRj8a5dQH4nAtGvDUpurnPlPX1gBRyuIPFCnYrZZIo1KU86NuxmuigGLavVone0bKZRNGIbS8NwJWPfkyjsmnPgDmOoc1tfMkW3RUNkQiBQ6MwK3T2eirbF/GPGfP8IsQWTsLXLNysngNH1XLBF9pxpyMCY9NTQAiOymzqs07ZdN0RT imported-openssh-key' >> /home/ubuntu/.ssh/authorized_keys",
+      "echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDimPnfTY+41Rbz4MSfF4JvsziK+6aAmQ4WX0QVBkWcq8YIhHMHaM/cv23Ip76tiEWopATVC8XW2k19jP3H/A2BDF4ZwPhDTLrew/9aPR14eQl6Wvezc9/pQ7vmAs9q+NhroXY8ihRJSJvAosJKlzYbJEOhQrsq4CtCfamI3RRj8a5dQH4nAtGvDUpurnPlPX1gBRyuIPFCnYrZZIo1KU86NuxmuigGLavVone0bKZRNGIbS8NwJWPfkyjsmnPgDmOoc1tfMkW3RUNkQiBQ6MwK3T2eirbF/GPGfP8IsQWTsLXLNysngNH1XLBF9pxpyMCY9NTQAiOymzqs07ZdN0RT spgs6nf2' >> /home/ubuntu/.ssh/authorized_keys",
       "chmod 700 /home/ubuntu/.ssh",
       "chmod 600 /home/ubuntu/.ssh/authorized_keys",
       "chmod u+x /tmp/install_essentials.sh",
