@@ -2,7 +2,7 @@ source "amazon-ebs" "aws" {
   access_key    = ""
   secret_key    = ""
   subnet_id     = "subnet-0bfc0d4034e3e3fff"
-  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-2.4"
+  ami_name      = "Jenkins-Gold-Slave-Image-jdk8-2.5"
   instance_type = "t2.large"
   region        = "us-east-1"
   launch_block_device_mappings { 
