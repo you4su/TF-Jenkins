@@ -27,8 +27,17 @@ echo "updrage done"
   echo "Python 3 install done"
 
 #Install NodeJS
-  sudo apt-get install nodejs npm -y \
+  #sudo apt-get install nodejs npm -y \
+  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  sudo npm install yarn --global
 #Install Git
   sudo apt-get install git-all -y \
 #Install zip
   sudo apt-get install zip -y
+#Install AWS Cli
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
+#Install Angular
+  sudo npm install -g @angular/cli@11.1.2
