@@ -24,7 +24,7 @@ echo "updrage done"
 #Install python pip3
   sudo apt-get -y install python3-pip && sudo apt-get install -y build-essential libffi-dev-python-dev && \
   sudo apt-get install -y nfs-common && sudo systemctl restart systemd-logind && \
-  pip3 install python-bcrypt -y \
+  pip3 install python-bcrypt -y && \
   echo "Python 3 install done"
 #Install NodeJS
   #sudo apt-get install nodejs npm -y \ return 8.5v
