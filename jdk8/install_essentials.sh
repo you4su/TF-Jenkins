@@ -44,3 +44,5 @@ echo "updrage done"
   sudo ./aws/install -i /usr/local/aws-cli -b /usr/local/bin && \
 #Install Angular cli
   sudo npm install -g @angular/cli@11.1.2
+#Install Maven
+  sudo apt-get install maven -y
